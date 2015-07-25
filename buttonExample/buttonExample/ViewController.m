@@ -95,51 +95,76 @@
     // 通过frame改变位置和大小
     CGRect rect = self.mybtn.frame;
     // center表示的是控件中心的坐标，改变位置
-    CGPoint point = self.mybtn.center;
+    // CGPoint point = self.mybtn.center;
     // 通过bounds改变大小
-    CGRect bounds = self.mybtn.bounds;
+    // CGRect bounds = self.mybtn.bounds;
     
     switch (sender.tag) {
         case 1:
             // up
-            // rect.origin.y -= 10;
-            point.y -= 10;
+            rect.origin.y -= 10;
+            // point.y -= 10;
             break;
         case 2:
             // down
-            // rect.origin.y += 10;
-            point.y += 10;
+            rect.origin.y += 10;
+            // point.y += 10;
             break;
         case 3:
             // left
-            // rect.origin.x -= 10;
-            point.x -= 10;
+            rect.origin.x -= 10;
+            // point.x -= 10;
             break;
         case 4:
             // right
-            // rect.origin.x += 10;
-            point.x += 10;
+            rect.origin.x += 10;
+            // point.x += 10;
             break;
         case 5:
             // big
-            // rect.size.height += 10;
-            // rect.size.width += 10;
-            bounds.size.height += 10;
-            bounds.size.width += 10;
+            rect.size.height += 10;
+            rect.size.width += 10;
+            // bounds.size.height += 10;
+            // bounds.size.width += 10;
             break;
         case 6:
             // small
-            // rect.size.height -= 10;
-            // rect.size.width -= 10;
-            bounds.size.height -= 10;
-            bounds.size.width -= 10;
+            rect.size.height -= 10;
+            rect.size.width -= 10;
+            // bounds.size.height -= 10;
+            // bounds.size.width -= 10;
             break;
         default:
             break;
     }
+    // 没有动画，直接执行
     // self.mybtn.frame = rect;
-    self.mybtn.center = point;
-    self.mybtn.bounds = bounds;
+    // self.mybtn.center = point;
+    // self.mybtn.bounds = bounds;
+    
+    /****************************************************
+    // 通过头尾式动画的方式执行
+    // 1.开启一个动画
+    [UIView beginAnimations:nil context:nil];
+    // 2.设置动画的执行时间
+    [UIView setAnimationDuration:0.5];
+    
+    //==============需要执行动画的动作======================
+    self.mybtn.frame = rect;
+    // self.mybtn.center = point;
+    // self.mybtn.bounds = bounds;
+    //===================================================
+    
+    // 3. 提交动画
+    [UIView commitAnimations];
+    
+    *****************************************************/
+    
+    // 通过block方式实现动画
+    [UIView animateWithDuration:0.5 animations:^{
+       // 执行动画的代码
+        self.mybtn.frame = rect;
+    }];
 }
 
 /**
