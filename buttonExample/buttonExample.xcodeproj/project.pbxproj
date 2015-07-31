@@ -14,6 +14,7 @@
 		6A58E6451B5E34B8002DF89C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A58E6441B5E34B8002DF89C /* Images.xcassets */; };
 		6A58E6481B5E34B8002DF89C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A58E6461B5E34B8002DF89C /* LaunchScreen.xib */; };
 		6A58E6541B5E34B8002DF89C /* buttonExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A58E6531B5E34B8002DF89C /* buttonExampleTests.m */; };
+		6A6C90C81B6A4AF2008C24D7 /* DynamicButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C90C71B6A4AF2008C24D7 /* DynamicButtonViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		6A58E64D1B5E34B8002DF89C /* buttonExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = buttonExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A58E6521B5E34B8002DF89C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A58E6531B5E34B8002DF89C /* buttonExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = buttonExampleTests.m; sourceTree = "<group>"; };
+		6A6C90C61B6A4AF2008C24D7 /* DynamicButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicButtonViewController.h; sourceTree = "<group>"; };
+		6A6C90C71B6A4AF2008C24D7 /* DynamicButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicButtonViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				6A58E6441B5E34B8002DF89C /* Images.xcassets */,
 				6A58E6461B5E34B8002DF89C /* LaunchScreen.xib */,
 				6A58E6371B5E34B8002DF89C /* Supporting Files */,
+				6A6C90C61B6A4AF2008C24D7 /* DynamicButtonViewController.h */,
+				6A6C90C71B6A4AF2008C24D7 /* DynamicButtonViewController.m */,
 			);
 			path = buttonExample;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6C90C81B6A4AF2008C24D7 /* DynamicButtonViewController.m in Sources */,
 				6A58E6401B5E34B8002DF89C /* ViewController.m in Sources */,
 				6A58E63D1B5E34B8002DF89C /* AppDelegate.m in Sources */,
 				6A58E63A1B5E34B8002DF89C /* main.m in Sources */,
@@ -416,6 +422,7 @@
 				6A58E6591B5E34B8002DF89C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A58E65A1B5E34B8002DF89C /* Build configuration list for PBXNativeTarget "buttonExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				6A58E65C1B5E34B8002DF89C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
