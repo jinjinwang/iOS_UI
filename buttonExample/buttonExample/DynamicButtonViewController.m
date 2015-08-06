@@ -42,19 +42,167 @@
     [button setBackgroundImage:imgHighlighted forState:UIControlStateHighlighted];
     
     // 5. 设置按钮的frame
-    button.frame = CGRectMake(50, 50, 100, 100);
+    button.frame = CGRectMake(116, 39, 100, 100);
     
-    // 通过代码为按钮注册一个单击事件
+    // 6. 通过代码为按钮注册一个单击事件
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    [button setTag:100];
     
-    
-    // 6. 把动态创建的按钮加到控制器所管理的那个view中
+    // 7. 把动态创建的按钮加到控制器所管理的那个view中
     [self.view addSubview:button];
+    
+    
+    // 上下左右键，放大缩小键
+    // 向上
+    UIButton *up = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *upNormalImage = [UIImage imageNamed:@"up"];
+    UIImage *upHighlightedImage = [UIImage imageNamed:@"up2"];
+    [up setBackgroundImage:upNormalImage forState:UIControlStateNormal];
+    [up setBackgroundImage:upHighlightedImage forState:UIControlStateHighlighted];
+    up.frame = CGRectMake(143, 244, 60, 60);
+    [up setTag:1];
+    [up addTarget:self action:@selector(change:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:up];
+    
+    // 向下
+    UIButton *down = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *downNormalImage = [UIImage imageNamed:@"down"];
+    UIImage *downHighlightedImage = [UIImage imageNamed:@"down2"];
+    [down setBackgroundImage:downNormalImage forState:UIControlStateNormal];
+    [down setBackgroundImage:downHighlightedImage forState:UIControlStateHighlighted];
+    down.frame = CGRectMake(143, 349, 60, 60);
+    [down setTag:2];
+    [down addTarget:self action:@selector(change:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:down];
+    
+    // 向左
+    UIButton *left = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *leftNormalImage = [UIImage imageNamed:@"left"];
+    UIImage *leftHighlightedImage = [UIImage imageNamed:@"left2"];
+    [left setBackgroundImage:leftNormalImage forState:UIControlStateNormal];
+    [left setBackgroundImage:leftHighlightedImage forState:UIControlStateHighlighted];
+    left.frame = CGRectMake(75, 293, 60, 60);
+    [left setTag:3];
+    [left addTarget:self action:@selector(change:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:left];
+    
+    // 向右
+    UIButton *right = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *rightNormalImage = [UIImage imageNamed:@"right"];
+    UIImage *rightHighlightedImage = [UIImage imageNamed:@"right2"];
+    [right setBackgroundImage:rightNormalImage forState:UIControlStateNormal];
+    [right setBackgroundImage:rightHighlightedImage forState:UIControlStateHighlighted];
+    right.frame = CGRectMake(211, 294, 60, 60);
+    [right setTag:4];
+    [right addTarget:self action:@selector(change:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:right];
+    
+    // 放大
+    UIButton *big = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *bigNormalImage = [UIImage imageNamed:@"add"];
+    UIImage *bigHighlightedImage = [UIImage imageNamed:@"add2"];
+    [big setBackgroundImage:bigNormalImage forState:UIControlStateNormal];
+    [big setBackgroundImage:bigHighlightedImage forState:UIControlStateHighlighted];
+    big.frame = CGRectMake(134, 420, 84, 55);
+    [big setTag:5];
+    [big addTarget:self action:@selector(change:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:big];
+    
+    // 缩小
+    UIButton *small = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *smallNormalImage = [UIImage imageNamed:@"minus"];
+    UIImage *smallHighlightedImage = [UIImage imageNamed:@"minus2"];
+    [small setBackgroundImage:smallNormalImage forState:UIControlStateNormal];
+    [small setBackgroundImage:smallHighlightedImage forState:UIControlStateHighlighted];
+    small.frame = CGRectMake(134, 484, 84, 55);
+    [small setTag:6];
+    [small addTarget:self action:@selector(change:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:small];
     
 }
 
 -(void)buttonClick{
     NSLog(@"按钮被点击啦");
+}
+
+-(void)change:(UIButton *)sender{
+    NSLog(@"点击了－－tag＝%ld", sender.tag);
+    // 获取到目标按钮
+    UIButton *mybtn = (UIButton *)[self.view viewWithTag:100];
+    
+    // 通过frame改变位置和大小
+    CGRect rect = mybtn.frame;
+    // center表示的是控件中心的坐标，改变位置
+    // CGPoint point = self.mybtn.center;
+    // 通过bounds改变大小
+    // CGRect bounds = self.mybtn.bounds;
+    
+    switch (sender.tag) {
+        case 1:
+            // up
+            rect.origin.y -= 10;
+            // point.y -= 10;
+            break;
+        case 2:
+            // down
+            rect.origin.y += 10;
+            // point.y += 10;
+            break;
+        case 3:
+            // left
+            rect.origin.x -= 10;
+            // point.x -= 10;
+            break;
+        case 4:
+            // right
+            rect.origin.x += 10;
+            // point.x += 10;
+            break;
+        case 5:
+            // big
+            rect.size.height += 10;
+            rect.size.width += 10;
+            // bounds.size.height += 10;
+            // bounds.size.width += 10;
+            break;
+        case 6:
+            // small
+            rect.size.height -= 10;
+            rect.size.width -= 10;
+            // bounds.size.height -= 10;
+            // bounds.size.width -= 10;
+            break;
+        default:
+            break;
+    }
+    // 没有动画，直接执行
+    // self.mybtn.frame = rect;
+    // self.mybtn.center = point;
+    // self.mybtn.bounds = bounds;
+    
+    /****************************************************
+     // 通过头尾式动画的方式执行
+     // 1.开启一个动画
+     [UIView beginAnimations:nil context:nil];
+     // 2.设置动画的执行时间
+     [UIView setAnimationDuration:0.5];
+     
+     //==============需要执行动画的动作======================
+     self.mybtn.frame = rect;
+     // self.mybtn.center = point;
+     // self.mybtn.bounds = bounds;
+     //===================================================
+     
+     // 3. 提交动画
+     [UIView commitAnimations];
+     
+     *****************************************************/
+    
+    // 通过block方式实现动画
+    [UIView animateWithDuration:0.5 animations:^{
+        // 执行动画的代码
+        mybtn.frame = rect;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

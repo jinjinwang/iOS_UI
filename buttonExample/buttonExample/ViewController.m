@@ -134,6 +134,36 @@
             // bounds.size.height -= 10;
             // bounds.size.width -= 10;
             break;
+        case 7:
+            // 平移
+            NSLog(@"平移");
+            // 在原始位置上进行平移
+            // self.mybtn.transform = CGAffineTransformMakeTranslation(50, 0);
+            // 在指定位置上进行平移
+            self.mybtn.transform = CGAffineTransformTranslate(self.mybtn.transform, 50, 0);
+            break;
+        case 8:
+            // 旋转
+            NSLog(@"旋转");
+            // 在原始位置上进行旋转
+            // self.mybtn.transform = CGAffineTransformMakeRotation(M_PI_4);
+            // 在指定位置上进行旋转
+            self.mybtn.transform = CGAffineTransformRotate(self.mybtn.transform, M_PI_4);
+            break;
+        case 9:
+            // 缩放
+            NSLog(@"缩放");
+            // 在原始位置上进行缩放
+            // self.mybtn.transform = CGAffineTransformMakeScale(1.5, 1.5);
+            // 在指定位置上进行缩放
+            self.mybtn.transform = CGAffineTransformScale(self.mybtn.transform, 1.5, 1.5);
+            break;
+        case 10:
+            NSLog(@"还原");
+            // 清空之前设置的transform
+            self.mybtn.transform = CGAffineTransformIdentity;
+            
+            break;
         default:
             break;
     }
@@ -163,7 +193,7 @@
     // 通过block方式实现动画
     [UIView animateWithDuration:0.5 animations:^{
        // 执行动画的代码
-        self.mybtn.frame = rect;
+       // self.mybtn.frame = rect;
     }];
 }
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>小狗狗。。。</string>
+		<key>pic</key>
+		<string>button1</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>小猫咪。。。</string>
+		<key>pic</key>
+		<string>button2</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>十字架。。。</string>
+		<key>pic</key>
+		<string>add2</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>禁止横放。。。</string>
+		<key>pic</key>
+		<string>minus2</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>灰色的。。。</string>
+		<key>pic</key>
+		<string>add</string>
+	</dict>
+</array>
+</plist>

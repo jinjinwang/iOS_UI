@@ -1,6 +1,6 @@
 按钮：点击后能做出响应的控件
 
-实例：
+实例1：ViewController.m
 1. 按钮的状态（普通状态normal，高亮状态highlighted，禁用状态disabled）
 2. 图片的移动
 3. 图片的放大缩小
@@ -34,4 +34,38 @@ block方式：
 6. 设置按钮的单击事件
 7. 将按钮添加到view中
 
+实例2: DynamicButtonViewController.m
+动态创建按钮
 
+transform改变位置，大小，旋转
+在原始位置上进行操作
+self.mybtn.transform = CGAffineTransformMakeTranslation(50, 0);
+self.mybtn.transform = CGAffineTransformMakeScale(1.5, 1.5);
+self.mybtn.transform = CGAffineTransformMakeRotation(M_PI_4);
+
+在指定的transform上进行操作
+self.mybtn.transform = CGAffineTransformTranslate(self.mybtn.transform, 50, 0);
+self.mybtn.transform = CGAffineTransformScale(self.mybtn.transform, 1.5, 1.5);
+self.mybtn.transform = CGAffineTransformRotate(self.mybtn.transform, M_PI_4);
+
+UIView的常见属性
+// 获取自己的父控件
+@property(nonatomic, readonly) UIView *superview;
+// 获取自己的所有子控件对象
+@property(nonatomic, readonly) NSArray *subviews;
+// 控件的id标识，父控件可以通过tag来找到对应的子控件
+@property(nonatomic) NSInteger tag;
+// 控件的形变属性（可以设置旋转的角度，比例缩放，平移等属性）
+@property(nonatomic) CGAffineTransform transform;
+
+UIView的常见方法
+// 添加一个子控件
+-(void) addSubview:(UIView *)view;
+// 从父控件中移除
+-(void) removeFromSuperview;
+// 根据一个tag标识找出对应的控件
+-(UIView *) viewWithTag:(NSInteger)tag;
+
+实例3: PhotographViewController.m
+图片浏览器
+读取plist文件数据
