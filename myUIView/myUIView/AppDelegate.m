@@ -16,16 +16,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // 建画框
-    UIWindow *window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // UIWindow *window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] aplicationFrame]] autorelease];
+    // 创建画框
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    //自己测试一下 bounds与aplicationFrame的区别
-    CGRect bound = [[UIScreen mainScreen]bounds];
+    //自己测试一下 bounds与aplicationFrame的区别, boundheight比appBoundheight高20, 高一个状态栏的高度
+    CGRect bound = [[UIScreen mainScreen]bounds]; // 返回的是带有状态栏的Rect
     NSLog(@"boundwidth:%f    boundheight:%f ",bound.size.width, bound.size.height);
     NSLog(@"boundx:%f    boundy:%f ",bound.origin.x, bound.origin.y);
     
-    CGRect appBound = [[UIScreen mainScreen]applicationFrame];
+    CGRect appBound = [[UIScreen mainScreen]applicationFrame]; // 不包含状态栏的Rect
     NSLog(@"appBoundwidth:%f appBoundheight:%f " ,appBound.size.width,appBound.size.height);
     NSLog(@"appBoundx:%f    appBoundy:%f ",appBound.origin.x, appBound.origin.y);
     
@@ -45,13 +44,13 @@
     v_two.backgroundColor = [UIColor redColor];//涂成红色
     
     [self.window addSubview:v_two];//叠加到画框
-    
+
     //第三块注意他的位置
     CGRect CGthree = CGRectMake(160, 100, 160, 100);
     UIView *v_three = [[UIView alloc]initWithFrame:CGthree];
     v_three.backgroundColor = [UIColor greenColor];
     [self.window addSubview:v_three];
-    
+
     //第四块注意它的位置
     CGRect CGfour = CGRectMake(0.0, 260, 320, 200);
     UIView *v_four = [[UIView alloc]initWithFrame:CGfour];
@@ -63,7 +62,10 @@
     UIView *v_five = [[UIView alloc]initWithFrame:CGfive];
     v_five.backgroundColor = [UIColor yellowColor];
     [self.window addSubview:v_five];
+    
+    // 给window设置一个背景色
     self.window.backgroundColor = [UIColor grayColor];
+    // 让window显示出来
     [self.window makeKeyAndVisible];
     
     //最后记得release
