@@ -39,10 +39,10 @@
     // 第一行距离顶部的距离
     CGFloat marginTop = 30;
     
-    CGFloat appW = 65;
-    CGFloat appH = 65;
-    CGFloat appX = 50;
-    CGFloat appY = 50;
+    CGFloat appW = 75; // 图标的宽
+    CGFloat appH = 110; // 图标的高
+    CGFloat appX = 0;
+    CGFloat appY = 0;
     // 每行显示的个数
     int columns = 3;
     // 获取控制器所管理view的宽度
@@ -50,28 +50,59 @@
     
     // 每个应用的水平间距
     CGFloat marginX = (viewWidth - columns * appW) / (columns + 1);
-    CGFloat appX0 = marginX;
+    CGFloat marginY = marginX; // 垂直间距假设和水平一样
     NSLog(@"%lu", [self.apps count]);
+    
     for (int i = 0; i < [self.apps count]; i++) {
         NSDictionary *dic = self.apps[i];
         // 创建应用图标
         UIView *appview = [[UIView alloc] init];
         // 设置uiview的背景色
-        UIColor *color = [UIColor colorWithPatternImage: [UIImage imageNamed:dic[@"icon"]]];
-        appview.backgroundColor = color;
+        appview.backgroundColor = [UIColor blueColor];
         
         // 设置uiview的frame属性
-        if (i != 0 && i % columns == 0) {
-            appY = appY + appH + marginX;
-            appX = appX0;
-        }else if(i != 0){
-            appX = appX + appW + marginX;
-        }
-        NSLog(@"第%d个: appX = %f, appY=%f", i, appX, appY);
+        // 通过行和列的索引确定坐标
+        int rowIndex = i % columns;
+        int columnIndex = i / columns;
+        appX = marginX + (appW + marginX) * rowIndex;
+        appY = marginTop + (appH + marginY) * columnIndex;
+        NSLog(@"第%d个: (%d, %d), (%f, %f)", i, rowIndex, columnIndex, appX, appY);
         appview.frame = CGRectMake(appX, appY, appW, appH);
         
         // 将appview加到self.view(控制器所管理的那个view)
         [self.view  addSubview:appview];
+        
+        // 向appview中增加子控件(UIImageView, UILabel, UIButton)
+        UIImageView *imageView = [[UIImageView alloc] init];
+        UIColor *color = [UIColor colorWithPatternImage: [UIImage imageNamed:dic[@"icon"]]];
+        imageView.backgroundColor = color;
+        CGFloat iconW = 65;
+        CGFloat iconH = 65;
+        imageView.frame = CGRectMake((appW - iconW)/2, 0, iconW, iconH);
+        [appview addSubview:imageView];
+        
+        UILabel *label = [[UILabel alloc] init];
+        CGFloat labelH = 10;
+        label.frame = CGRectMake(0, iconH, appW, labelH);
+        label.text = dic[@"name"];
+        // 设置文本居中
+        label.textAlignment = UITextAlignmentCenter;
+        // 设置字体大小
+        label.font = [UIFont fontWithName:@"Helvetica" size:14];
+        label.numberOfLines = 1;
+        //label.numberOfLines = 0;
+        label.adjustsFontSizeToFitWidth = YES;
+        [appview addSubview:label];
+        
+        UIButton *button = [[UIButton alloc] init];
+        CGFloat buttonH = 20;
+        button.frame = CGRectMake((appW - iconW)/2, iconH + labelH + 8, iconW, buttonH);
+        [button setBackgroundImage:[UIImage imageNamed:@"buttongreen"] forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:@"buttonhighlighted"] forState:UIControlStateHighlighted];
+        [button setTitle:@"下载" forState:UIControlStateNormal];
+        button.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:14];
+        [appview addSubview:button];
+        
     }
     
     
