@@ -101,12 +101,27 @@
         [button setBackgroundImage:[UIImage imageNamed:@"buttonhighlighted"] forState:UIControlStateHighlighted];
         [button setTitle:@"下载" forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:14];
+        // 设置点击事件
+        [button addTarget:self action:@selector(download:) forControlEvents:UIControlEventTouchUpInside];
         [appview addSubview:button];
         
     }
     
     
     
+}
+
+/**
+ *  处理下载点击事件
+ *
+ *  @param sender <#sender description#>
+ */
+-(void)download:(UIButton *)sender{
+    // 初始化alertview
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"下载成功" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    //显示AlertView
+    [alert show];
+    NSLog(@"点击了按钮");
 }
 
 - (void)didReceiveMemoryWarning {
