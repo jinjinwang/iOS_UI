@@ -101,7 +101,7 @@
         label.adjustsFontSizeToFitWidth = YES;
         [appview addSubview:label];
         
-        // 4.3增加一个按钮UIButton
+        // 4.3 增加一个按钮UIButton
         UIButton *button = [[UIButton alloc] init];
         CGFloat buttonH = 20;
         button.frame = CGRectMake((appW - iconW)/2, iconH + labelH + 8, iconW, buttonH);
