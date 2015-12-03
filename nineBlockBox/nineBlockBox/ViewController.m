@@ -74,15 +74,20 @@
         // 3. 将appview加到self.view(控制器所管理的那个view)
         [self.view  addSubview:appview];
         
-        // 向appview中增加子控件(UIImageView, UILabel, UIButton)
+        // 4. 向appview中增加子控件(UIImageView, UILabel, UIButton)
+        // 4.1 增加一个图片框
         UIImageView *imageView = [[UIImageView alloc] init];
+        // 设置背景图片
         UIColor *color = [UIColor colorWithPatternImage: [UIImage imageNamed:dic[@"icon"]]];
         imageView.backgroundColor = color;
+        // 设置frame
         CGFloat iconW = 65;
         CGFloat iconH = 65;
         imageView.frame = CGRectMake((appW - iconW)/2, 0, iconW, iconH);
+        // 将图片框加入到appview中
         [appview addSubview:imageView];
         
+        // 4.2 增加一个标签UILabel
         UILabel *label = [[UILabel alloc] init];
         CGFloat labelH = 10;
         label.frame = CGRectMake(0, iconH, appW, labelH);
@@ -96,6 +101,7 @@
         label.adjustsFontSizeToFitWidth = YES;
         [appview addSubview:label];
         
+        // 4.3增加一个按钮UIButton
         UIButton *button = [[UIButton alloc] init];
         CGFloat buttonH = 20;
         button.frame = CGRectMake((appW - iconW)/2, iconH + labelH + 8, iconW, buttonH);
