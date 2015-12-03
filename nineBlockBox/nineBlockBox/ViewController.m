@@ -55,21 +55,23 @@
     
     for (int i = 0; i < [self.apps count]; i++) {
         NSDictionary *dic = self.apps[i];
-        // 创建应用图标
+        // 1. 创建每个应用图标
         UIView *appview = [[UIView alloc] init];
-        // 设置uiview的背景色
+        
+        // 2. 设置appview的属性
+        // 2.1 设置appview的背景色
         appview.backgroundColor = [UIColor blueColor];
         
-        // 设置uiview的frame属性
+        // 2.2 设置appview的frame属性
         // 通过行和列的索引确定坐标
-        int rowIndex = i % columns;
-        int columnIndex = i / columns;
+        int rowIndex = i % columns; // 行索引
+        int columnIndex = i / columns; // 列索引
         appX = marginX + (appW + marginX) * rowIndex;
         appY = marginTop + (appH + marginY) * columnIndex;
         NSLog(@"第%d个: (%d, %d), (%f, %f)", i, rowIndex, columnIndex, appX, appY);
         appview.frame = CGRectMake(appX, appY, appW, appH);
         
-        // 将appview加到self.view(控制器所管理的那个view)
+        // 3. 将appview加到self.view(控制器所管理的那个view)
         [self.view  addSubview:appview];
         
         // 向appview中增加子控件(UIImageView, UILabel, UIButton)
