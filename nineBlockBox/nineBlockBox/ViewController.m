@@ -93,7 +93,7 @@
         label.frame = CGRectMake(0, iconH, appW, labelH);
         label.text = dic[@"name"];
         // 设置文本居中
-        label.textAlignment = UITextAlignmentCenter;
+        label.textAlignment = NSTextAlignmentCenter;
         // 设置字体大小
         label.font = [UIFont fontWithName:@"Helvetica" size:14];
         label.numberOfLines = 1;
