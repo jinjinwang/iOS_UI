@@ -60,7 +60,7 @@
         
         // 2. 设置appview的属性
         // 2.1 设置appview的背景色
-        appview.backgroundColor = [UIColor blueColor];
+        // appview.backgroundColor = [UIColor blueColor];
         
         // 2.2 设置appview的frame属性
         // 通过行和列的索引确定坐标
@@ -105,9 +105,13 @@
         UIButton *button = [[UIButton alloc] init];
         CGFloat buttonH = 20;
         button.frame = CGRectMake((appW - iconW)/2, iconH + labelH + 8, iconW, buttonH);
+        // 设置背景图片
         [button setBackgroundImage:[UIImage imageNamed:@"buttongreen"] forState:UIControlStateNormal];
         [button setBackgroundImage:[UIImage imageNamed:@"buttonhighlighted"] forState:UIControlStateHighlighted];
+        // 设置按钮上的文字
         [button setTitle:@"下载" forState:UIControlStateNormal];
+        [button setTitle:@"已安装" forState:UIControlStateDisabled];
+        // 设置按钮文字字体
         button.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:14];
         // 设置点击事件
         [button addTarget:self action:@selector(download:) forControlEvents:UIControlEventTouchUpInside];
