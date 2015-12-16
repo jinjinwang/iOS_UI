@@ -70,6 +70,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0334E9DC1C2162F500D88B37 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03DC0CDE1C1EB2A70007CE31 /* ViewController.m */,
+				03DC0CDD1C1EB2A70007CE31 /* ViewController.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0334E9DD1C21631A00D88B37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03DC0D071C2007990007CE31 /* CZAppView.h */,
+				03DC0D081C2007990007CE31 /* CZAppView.m */,
+				03DC0D0A1C2009B40007CE31 /* CZAppView.xib */,
+				03DC0CE51C1EB2A70007CE31 /* LaunchScreen.xib */,
+				03DC0CE01C1EB2A70007CE31 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0334E9DE1C21632300D88B37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03DC0CFE1C1FBC480007CE31 /* CZApp.h */,
+				03DC0CFF1C1FBC490007CE31 /* CZApp.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0334E9DF1C21634E00D88B37 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				03DC0CDA1C1EB2A70007CE31 /* AppDelegate.h */,
+				03DC0CDB1C1EB2A70007CE31 /* AppDelegate.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
 		03DC0CCA1C1EB2A70007CE31 = {
 			isa = PBXGroup;
 			children = (
@@ -91,19 +130,11 @@
 		03DC0CD51C1EB2A70007CE31 /* nineBlockBox2 */ = {
 			isa = PBXGroup;
 			children = (
-				03DC0CDA1C1EB2A70007CE31 /* AppDelegate.h */,
-				03DC0CDB1C1EB2A70007CE31 /* AppDelegate.m */,
-				03DC0CDD1C1EB2A70007CE31 /* ViewController.h */,
-				03DC0CDE1C1EB2A70007CE31 /* ViewController.m */,
-				03DC0CE01C1EB2A70007CE31 /* Main.storyboard */,
-				03DC0CE31C1EB2A70007CE31 /* Images.xcassets */,
-				03DC0CE51C1EB2A70007CE31 /* LaunchScreen.xib */,
+				0334E9DF1C21634E00D88B37 /* Others */,
+				0334E9DE1C21632300D88B37 /* Models */,
+				0334E9DD1C21631A00D88B37 /* Views */,
+				0334E9DC1C2162F500D88B37 /* Controllers */,
 				03DC0CD61C1EB2A70007CE31 /* Supporting Files */,
-				03DC0CFE1C1FBC480007CE31 /* CZApp.h */,
-				03DC0CFF1C1FBC490007CE31 /* CZApp.m */,
-				03DC0D071C2007990007CE31 /* CZAppView.h */,
-				03DC0D081C2007990007CE31 /* CZAppView.m */,
-				03DC0D0A1C2009B40007CE31 /* CZAppView.xib */,
 			);
 			path = nineBlockBox2;
 			sourceTree = "<group>";
@@ -111,6 +142,7 @@
 		03DC0CD61C1EB2A70007CE31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				03DC0CE31C1EB2A70007CE31 /* Images.xcassets */,
 				03DC0CFC1C1EB5900007CE31 /* app.plist */,
 				03DC0CD71C1EB2A70007CE31 /* Info.plist */,
 				03DC0CD81C1EB2A70007CE31 /* main.m */,
@@ -438,6 +470,7 @@
 				03DC0CF81C1EB2A80007CE31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03DC0CF91C1EB2A80007CE31 /* Build configuration list for PBXNativeTarget "nineBlockBox2Tests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +479,7 @@
 				03DC0CFB1C1EB2A80007CE31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
