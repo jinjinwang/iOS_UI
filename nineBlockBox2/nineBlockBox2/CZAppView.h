@@ -1,6 +1,6 @@
 //
 //  CZAppView.h
-//  nineBlockBox2
+//  自定义view, 用于接收xib中的控件
 //
 //  Created by 王金金 on 15/12/15.
 //  Copyright (c) 2015年 王金金. All rights reserved.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class CZApp;
 @interface CZAppView : UIView
-@property (weak, nonatomic) IBOutlet UIButton *downloadBtn;
-@property (weak, nonatomic) IBOutlet UILabel *appName;
-@property (weak, nonatomic) IBOutlet UIImageView *appIcon;
-
+@property(nonatomic, strong) CZApp *model;
++(instancetype) appView;
 @end

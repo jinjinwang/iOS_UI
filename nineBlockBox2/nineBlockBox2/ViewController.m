@@ -1,6 +1,7 @@
 //
 //  ViewController.m
 //  nineBlockBox2
+//  MVC: CZApp + CZAppView + ViewController
 //
 //  Created by 王金金 on 15/12/14.
 //  Copyright (c) 2015年 王金金. All rights reserved.
@@ -10,6 +11,9 @@
 #import "CZApp.h"
 #import "CZAppView.h"
 
+
+// shift + option + command + 左 : 折叠所有的代码
+// shift + option + command + 右 : 展开所有的代码
 @interface ViewController ()
 
 // 用来保存应用的数据
@@ -68,13 +72,11 @@
     NSLog(@"%u", [self.apps count]);
     
     for (int i = 0; i < [self.apps count]; i++) {
+        // 0. 获取数据
         CZApp *app = self.apps[i];
-        // 1. 通过动态加载xib文件创建里面的view
-        // 获取应用程序的根目录
-        NSBundle *rootBundle = [NSBundle mainBundle];
-        // 在根目录下搜索xib文件
-        CZAppView *appView = [[rootBundle loadNibNamed:@"CZAppView" owner: nil options:nil] lastObject];
         
+        // 1. 创建自定义view
+        CZAppView *appView = [CZAppView appView];
         
         // 2. 设置appview的属性
         // 设置appview的frame属性
@@ -90,30 +92,13 @@
         [self.view  addSubview:appView];
         
         // 4. 给控件设置值
-        appView.appIcon.image = [UIImage imageNamed:app.icon];
-        appView.appName.text = app.name;
-        [appView.downloadBtn addTarget:self action:@selector(download:) forControlEvents:UIControlEventTouchUpInside];
-        
-        
-        
+        appView.model = app;
     }
     
     
     
 }
 
-/**
- *  处理下载点击事件
- *
- *  @param sender <#sender description#>
- */
--(void)download:(UIButton *)sender{
-    // 初始化alertview
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"下载成功" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-    //显示AlertView
-    [alert show];
-    NSLog(@"点击了按钮");
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
