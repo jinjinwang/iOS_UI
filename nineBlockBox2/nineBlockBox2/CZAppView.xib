@@ -20,14 +20,15 @@
                     <rect key="frame" x="15" y="0.0" width="45" height="40"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-9P-UjJ">
-                    <rect key="frame" x="15" y="65" width="45" height="22"/>
+                    <rect key="frame" x="15" y="68" width="45" height="22"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="下载" backgroundImage="buttongreen">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="disabled" title="已下载"/>
                     <state key="highlighted" backgroundImage="buttonhighlighted"/>
                     <connections>
-                        <action selector="download:" destination="xyP-Xq-P0F" eventType="touchUpInside" id="AKU-uq-tdR"/>
+                        <action selector="download:" destination="xyP-Xq-P0F" eventType="touchUpInside" id="x1R-nN-D2G"/>
                     </connections>
                 </button>
             </subviews>
