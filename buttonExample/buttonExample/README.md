@@ -69,3 +69,14 @@ UIView的常见方法
 实例3: PhotographViewController.m
 图片浏览器
 读取plist文件数据
+
+图片浏览器需要掌握的知识点：
+1. 更换UIImageView的图片
+2. 了解UIImageView的contentMode
+3. 更换UILabel的文字
+4. 在storyboard中设置UILabel的自动换行和文字居中
+5. NSArray和NSDictionary的简单使用
+6. Plist文件的创建和读取
+7. 属性的懒加载
+8. viewDidLoad方法的使用
+9. UIButton的多种状态

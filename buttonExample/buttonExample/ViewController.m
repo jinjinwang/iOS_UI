@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *mybtn;
+- (IBAction)scroll:(id)sender;
 
 //-(IBAction)up;
 //-(IBAction)down:(id)sender;
@@ -223,4 +224,6 @@
     self.mybtn.frame = rect;
 }
 
+- (IBAction)scroll:(id)sender {
+}
 @end
