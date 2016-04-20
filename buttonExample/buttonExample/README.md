@@ -70,6 +70,7 @@ UIView的常见方法
 图片浏览器
 读取plist文件数据
 
+
 图片浏览器需要掌握的知识点：
 1. 更换UIImageView的图片
 2. 了解UIImageView的contentMode
