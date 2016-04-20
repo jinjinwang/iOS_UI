@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7D524479-1D67-4A20-B696-B766CA87DC5A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>buttonExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BB1BB9883F8872BD9422C5DECE34EAAB1A4CAA0C</key>
+		<string>https://github.com/jinjinwang/iOS_UI.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>buttonExample/buttonExample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BB1BB9883F8872BD9422C5DECE34EAAB1A4CAA0C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jinjinwang/iOS_UI.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BB1BB9883F8872BD9422C5DECE34EAAB1A4CAA0C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BB1BB9883F8872BD9422C5DECE34EAAB1A4CAA0C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS_UI</string>
+		</dict>
+	</array>
+</dict>
+</plist>

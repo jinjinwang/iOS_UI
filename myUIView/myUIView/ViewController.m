@@ -18,8 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
+    // Do any additional setup after loading the view, typically from a nib.ß
     NSArray *array = [[NSArray alloc] initWithObjects:@"美国", @"菲律宾",
                       @"黄岩岛", @"中国", @"泰国", @"越南", @"老挝",
                       @"日本" , nil];

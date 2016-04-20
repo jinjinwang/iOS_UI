@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03E185BE1BC7A5D100280242"
-               BuildableName = "UIViewState.app"
-               BlueprintName = "UIViewState"
-               ReferencedContainer = "container:UIViewState.xcodeproj">
+               BlueprintIdentifier = "037AD6311C27942900E4E71C"
+               BuildableName = "PictureGame.app"
+               BlueprintName = "PictureGame"
+               ReferencedContainer = "container:PictureGame.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03E185D71BC7A5D200280242"
-               BuildableName = "UIViewStateTests.xctest"
-               BlueprintName = "UIViewStateTests"
-               ReferencedContainer = "container:UIViewState.xcodeproj">
+               BlueprintIdentifier = "037AD64A1C27942900E4E71C"
+               BuildableName = "PictureGameTests.xctest"
+               BlueprintName = "PictureGameTests"
+               ReferencedContainer = "container:PictureGame.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03E185D71BC7A5D200280242"
-               BuildableName = "UIViewStateTests.xctest"
-               BlueprintName = "UIViewStateTests"
-               ReferencedContainer = "container:UIViewState.xcodeproj">
+               BlueprintIdentifier = "037AD64A1C27942900E4E71C"
+               BuildableName = "PictureGameTests.xctest"
+               BlueprintName = "PictureGameTests"
+               ReferencedContainer = "container:PictureGame.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA1DD8D1183BBA4D00F3EE8A"
-            BuildableName = "TextField_TextViewSample.app"
-            BlueprintName = "TextField_TextViewSample"
-            ReferencedContainer = "container:../../iOS&#x5f00;&#x53d1;&#x6307;&#x5357;&#x7b2c;2&#x7248;&#x4ee3;&#x7801;/code/ch03/3.3 TextField_TextViewSample/TextField_TextViewSample.xcodeproj">
+            BlueprintIdentifier = "037AD6311C27942900E4E71C"
+            BuildableName = "PictureGame.app"
+            BlueprintName = "PictureGame"
+            ReferencedContainer = "container:PictureGame.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA1DD8D1183BBA4D00F3EE8A"
-            BuildableName = "TextField_TextViewSample.app"
-            BlueprintName = "TextField_TextViewSample"
-            ReferencedContainer = "container:../../iOS&#x5f00;&#x53d1;&#x6307;&#x5357;&#x7b2c;2&#x7248;&#x4ee3;&#x7801;/code/ch03/3.3 TextField_TextViewSample/TextField_TextViewSample.xcodeproj">
+            BlueprintIdentifier = "037AD6311C27942900E4E71C"
+            BuildableName = "PictureGame.app"
+            BlueprintName = "PictureGame"
+            ReferencedContainer = "container:PictureGame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,10 +95,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "03E185BE1BC7A5D100280242"
-            BuildableName = "UIViewState.app"
-            BlueprintName = "UIViewState"
-            ReferencedContainer = "container:UIViewState.xcodeproj">
+            BlueprintIdentifier = "037AD6311C27942900E4E71C"
+            BuildableName = "PictureGame.app"
+            BlueprintName = "PictureGame"
+            ReferencedContainer = "container:PictureGame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
