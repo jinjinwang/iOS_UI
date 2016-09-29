@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AA94D3B1CCD22D8002F3EF3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6AA94D3A1CCD22D8002F3EF3 /* README.md */; };
 		6AB78CD51CCD120000D03B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB78CD41CCD120000D03B45 /* AppDelegate.swift */; };
 		6AB78CD71CCD120000D03B45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB78CD61CCD120000D03B45 /* ViewController.swift */; };
 		6AB78CDA1CCD120000D03B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB78CD81CCD120000D03B45 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6AA94D3A1CCD22D8002F3EF3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6AB78CD11CCD120000D03B45 /* swiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB78CD41CCD120000D03B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AB78CD61CCD120000D03B45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				6AB78CDB1CCD120000D03B45 /* Assets.xcassets */,
 				6AB78CDD1CCD120000D03B45 /* LaunchScreen.storyboard */,
 				6AB78CE01CCD120000D03B45 /* Info.plist */,
+				6AA94D3A1CCD22D8002F3EF3 /* README.md */,
 			);
 			path = swiftStudy;
 			sourceTree = "<group>";
@@ -193,13 +196,16 @@
 				TargetAttributes = {
 					6AB78CD01CCD120000D03B45 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					6AB78CE41CCD120000D03B45 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = 6AB78CD01CCD120000D03B45;
 					};
 					6AB78CEF1CCD120000D03B45 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = 6AB78CD01CCD120000D03B45;
 					};
 				};
@@ -256,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AA94D3B1CCD22D8002F3EF3 /* README.md in Sources */,
 				6AB78CD71CCD120000D03B45 /* ViewController.swift in Sources */,
 				6AB78CD51CCD120000D03B45 /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +412,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.jinwei.swiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -416,6 +424,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.jinwei.swiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -427,6 +436,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.jinwei.swiftStudyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swiftStudy.app/swiftStudy";
 			};
 			name = Debug;
@@ -439,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.jinwei.swiftStudyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swiftStudy.app/swiftStudy";
 			};
 			name = Release;
@@ -450,6 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.jinwei.swiftStudyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = swiftStudy;
 			};
 			name = Debug;
@@ -461,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.jinwei.swiftStudyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = swiftStudy;
 			};
 			name = Release;
@@ -484,6 +497,7 @@
 				6AB78CFB1CCD120000D03B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AB78CFC1CCD120000D03B45 /* Build configuration list for PBXNativeTarget "swiftStudyTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +506,7 @@
 				6AB78CFE1CCD120000D03B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AB78CFF1CCD120000D03B45 /* Build configuration list for PBXNativeTarget "swiftStudyUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +515,7 @@
 				6AB78D011CCD120000D03B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
